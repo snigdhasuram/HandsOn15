@@ -23,7 +23,6 @@ class Graph():
 		return min_index 
 
 	def dijkstra(self, src): 
-
 		dist = [sys.maxsize] * self.V 
 		dist[src] = 0
 		sptSet = [False] * self.V 
@@ -34,9 +33,8 @@ class Graph():
 			for v in range(self.V): 
 				if self.graph[u][v] > 0 and sptSet[v] == False and dist[v] > dist[u] + self.graph[u][v]: 
 						dist[v] = dist[u] + self.graph[u][v] 
-
 		self.printSolution(dist) 
-
+		
 N = int(input("enter no of vertices: "))
 g=Graph(N)
 print("enter adjacency matrix: ")
